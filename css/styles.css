@@ -40,6 +40,7 @@ li {
 .img {
   display: block;
 }
+
 /*heder*/
 .container {
   width: 1200px;
@@ -215,7 +216,7 @@ h1 {
   color: var(--accent-color);
   background-color: var(--primary-white-color);
 }
-/*peculiarities*/
+/*Peculiarities*/
 .post {
   background: var(--primary-white-color);
   padding-top: 94px;
@@ -411,7 +412,9 @@ h1 {
   width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
-  transition: color 250ms var(--transition-timing-function);
+  border-radius: 4px;
+  transition: color 250ms var(--transition-timing-function),
+    border 250ms var(--transition-timing-function);
 }
 .clients .item + .item {
   margin-left: 30px;
@@ -515,6 +518,8 @@ h1 {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  transition: background 250ms var(--transition-timing-function),
+    border 250ms var(--transition-timing-function);
   background: rgba(255, 255, 255, 0.1);
 }
 .network-list .item + .item {
@@ -524,7 +529,9 @@ h1 {
   fill: var(--primary-white-color);
 }
 
-.network .twitter {
+.network .link:hover,
+.network .link:focus {
+  border: 1px solid var(--accent-color);
   background: var(--accent-color);
 }
 /* Portfolio Page*/
@@ -540,6 +547,7 @@ h1 {
   letter-spacing: 0.03em;
   padding: 6px 22px;
   cursor: pointer;
+  border-radius: 4px;
   transition: color 250ms var(--transition-timing-function),
     background 250ms var(--transition-timing-function),
     box-shadow 250ms var(--transition-timing-function);
@@ -551,7 +559,6 @@ h1 {
   background: #2196f3;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
 }
 
 /*portfolio section*/
@@ -585,8 +592,6 @@ h1 {
 }
 
 .soft-list .item {
-  transition: transform 250ms var(--transition-timing-function),
-    box-shadow 250ms var(--transition-timing-function);
   background: #ffffff;
   border: 1px solid #eeeeee;
 }
@@ -626,18 +631,23 @@ h1 {
   position: relative;
   overflow: hidden;
 }
-.description-wrapper {
+.wrapper {
   position: absolute;
-  width: 370px;
-  height: 294px;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   opacity: 0;
-  overflow: hidden;
-  transform: translateY(0);
-  transition: transform 250ms var(--transition-timing-function);
+
+  transform: translateY(100%);
+  transition: transform 250ms var(--transition-timing-function),
+    opacity 750ms var(--transition-timing-function);
   background-color: rgba(33, 150, 243, 0.9);
 }
 .description-info {
   position: absolute;
+  display: block;
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
@@ -646,8 +656,8 @@ h1 {
   right: 24px;
   color: #ffffff;
 }
-.description:hover .description-wrapper {
-  transform: translateY(-100%);
+.description:hover .wrapper {
+  transform: translateY(0);
   opacity: 1;
 }
 /*Modal*/
@@ -706,4 +716,79 @@ h1 {
   justify-content: center;
   align-items: center;
   fill: #000000;
+}
+.form {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  height: 581px;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+form-field input {
+  margin: 0;
+  padding: 0;
+  padding: 18px 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.form-name {
+  margin: 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+  padding-top: 37px;
+  padding-bottom: 30px;
+}
+.form-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-left: 41px;
+  padding-right: 39px;
+  margin-bottom: 17px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: #757575;
+}
+input .icon {
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  top: 11px;
+  left: 12px;
+}
+
+.comments {
+  width: 448px;
+  height: 120px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+textarea {
+  resize: none;
+}
+.form-policy {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
+
+  color: #757575;
 }
