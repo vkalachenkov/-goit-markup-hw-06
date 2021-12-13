@@ -730,12 +730,7 @@ h1 {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-form-field input {
-  margin: 0;
-  padding: 0;
-  padding: 18px 40px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
+ {
 }
 .form-name {
   margin: 0;
@@ -755,22 +750,36 @@ form-field input {
   flex-direction: column;
   padding-left: 41px;
   padding-right: 39px;
-  margin-bottom: 17px;
+
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
 
   color: #757575;
 }
-input .icon {
+.form-field input {
+  margin: 0;
+  padding: 0;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.form-label {
+  position: absolute;
+  top: 0;
+  left: 41px;
+  transform: translateY(-14px);
+}
+.form-field .icon {
   position: absolute;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  width: 18px;
+  height: 18px;
   top: 11px;
-  left: 12px;
+  left: 53px;
 }
 
 .comments {
@@ -791,4 +800,8 @@ textarea {
   letter-spacing: 0.03em;
 
   color: #757575;
+}
+.form-field input:focus svg {
+  fill: var(--accent-color);
+  border: var(--accent-color);
 }
