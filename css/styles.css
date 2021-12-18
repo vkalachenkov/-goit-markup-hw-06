@@ -544,8 +544,8 @@ h1 {
   width: 570px;
 }
 
-.form-footer label {
-  margin-bottom: 20px;
+.footer-field label {
+  margin-bottom: 18px;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -554,7 +554,7 @@ h1 {
   text-transform: uppercase;
   color: var(--primary-white-color);
 }
-.form-footer input {
+.footer-field input {
   margin: 0;
   padding: 16px 15px;
   width: 358px;
@@ -564,7 +564,7 @@ h1 {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   background: var(--secondary-background-color);
 }
-.form-footer input::placeholder {
+.footer-field input::placeholder {
   font-size: 16px;
   line-height: 1.25;
   display: flex;
@@ -573,7 +573,7 @@ h1 {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.form-footer button {
+.footer-field button {
   display: flex;
   align-items: center;
   text-align: center;
@@ -593,11 +593,11 @@ h1 {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
 }
-.form-footer button:hover,
-.form-footer button:focus {
+.footer-field button:hover,
+.footer-field button:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-.form-footer .icon {
+footer-field .icon {
   margin-left: 10px;
 }
 /* Portfolio Page*/
