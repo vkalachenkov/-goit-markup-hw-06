@@ -545,7 +545,6 @@ h1 {
 }
 
 .footer-field label {
-  margin-bottom: 18px;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -556,6 +555,8 @@ h1 {
 }
 .footer-field input {
   margin: 0;
+  margin-top: 10px;
+  margin-right: 12px;
   padding: 16px 15px;
   width: 358px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -597,7 +598,7 @@ h1 {
 .footer-field button:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-footer-field .icon {
+.footer-btn .icon {
   margin-left: 10px;
 }
 /* Portfolio Page*/
