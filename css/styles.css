@@ -545,24 +545,23 @@ h1 {
 }
 
 .form-footer label {
+  margin-bottom: 20px;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-bottom: 20px;
-  color: #ffffff;
+  color: var(--primary-white-color);
 }
 .form-footer input {
   margin: 0;
   padding: 16px 15px;
   width: 358px;
-
   border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
   background: var(--secondary-background-color);
 }
 .form-footer input::placeholder {
@@ -589,14 +588,14 @@ h1 {
   margin-left: auto;
   transform: translateY(-50px);
   cursor: pointer;
-  border-radius: 4px solid;
-  transition: filter 250ms var(--transition-timing-function);
+  border-radius: 4px;
+  transition: box-shadow 250ms var(--transition-timing-function);
   color: var(--primary-white-color);
   background-color: var(--accent-color);
 }
 .form-footer button:hover,
 .form-footer button:focus {
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .form-footer .icon {
   margin-left: 10px;
@@ -781,6 +780,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 2px;
   fill: #000000;
   transition: fill 250ms var(--transition-timing-function);
 }
@@ -793,7 +793,7 @@ h1 {
 
 .form {
   position: relative;
-  padding-top: 20px;
+  padding-top: 25px;
   padding-left: 40px;
   padding-right: 40px;
   min-width: 528px;
@@ -839,7 +839,6 @@ cursor {
   margin: 0;
   padding: 11px 12px;
   padding-left: 32px;
-  outline: 1px solid rgba(33, 33, 33, 0.2);
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border-color 250ms var(--transition-timing-function),
@@ -899,8 +898,9 @@ cursor {
 }
 .icon-policy {
   position: absolute;
-  display: block;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 16px;
   height: 15px;
   margin-top: 4px;
@@ -982,7 +982,7 @@ textarea {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-  border-radius: 4px solid;
+
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: var(--accent-color);
   color: var(--primary-white-color);
